@@ -1,0 +1,167 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.title {
+    position: absolute;
+    left: 16.25%;
+    right: -1.59%;
+    top: 28.66%;
+    bottom: 22.89%;
+
+}
+
+.signIn {
+    height: 34px;
+    width: 101px;
+    left: 900px;
+    top: 194px;
+    border-radius: nullpx;
+}
+
+.text {
+    /* Don’t have an account? */
+    position: absolute;
+    width: 171px;
+    height: 24px;
+    left: 900px;
+    top: 243px;
+
+    /* text */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
+
+    text-align: center;
+    color: #333333;
+}
+
+.signUpNow {
+    /* Sign up now */
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    /* text */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
+
+    text-align: center;
+
+    /* primary_blue */
+    color: #065BEA;
+}
+
+
+Button {
+
+    position: absolute;
+    background: #065BEA;
+    border-radius: 8px;
+    height: 54px;
+    width: 420px;
+    border-radius: 8px;
+
+    :hover {
+        height: 54px;
+        width: 420px;
+        left: 0px;
+        top: 0px;
+        border-radius: 8px;
+        background: #0451D2;
+    }
+
+    :active {
+        height: 54px;
+        width: 420px;
+        left: 0px;
+        top: 0px;
+        border-radius: 8px;
+        background: #065BEA;
+    }
+
+    :disabled {
+        height: 54px;
+        width: 420px;
+        left: 0px;
+        top: 0px;
+        border-radius: 8px;
+        background: #C6D0E0;
+    }
+}
+
+.infoLinks {
+    height: 24px;
+    width: 204px;
+    left: 900px;
+    top: 826px;
+    border-radius: 0px;
+    flex-direction: row;
+
+    .contact {
+        position: absolute;
+        /* text */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        /* identical to box height, or 171% */
+        color: #75777A;
+
+    }
+
+    .privacy {
+        /* Privacy */
+        position: absolute;
+        left: 0%;
+        right: 8.62%;
+        top: 0%;
+        bottom: 0%;
+
+        /* text */
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        /* identical to box height, or 171% */
+
+
+        color: #333333;
+
+    }
+
+    .terms {
+        position: absolute;
+        left: 0%;
+        right: -2.27%;
+        top: 0%;
+        bottom: 0%;
+
+        /* text */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        /* identical to box height, or 171% */
+        color: #75777A;
+    }
+}
