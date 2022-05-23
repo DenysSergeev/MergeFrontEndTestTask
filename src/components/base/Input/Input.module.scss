@@ -1,59 +1,90 @@
+@import "../../../styles/variables.scss";
+
+@mixin defaultFieldStyles {
+    width: 100%;
+    max-height: 54px;
+    height: 54px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    outline: 0;
+    border: 1px solid $defaultInputBorder;
+    transition: all .3s;
+    padding: 1rem;
+}
+
 .container {
+    width: 100%;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
-input {
-    height: 54px;
-    width: 420px;
-    left: 0px;
-    top: 27px;
-    border-radius: 8px;
-
-    :default {
-        border: 1px solid #E0E5E9
-    }
-
-    :active {
-        border: 1px solid #065BEA
-    }
-
-    :invalid {
-        border: 1px solid #FF4B26
-    }
-    :valid {
-        border: 1px solid #6FCF97
-
-    }
-
-}
-
-label {
-    /* text */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
-    /* or 171% */
-
+.labelContainer {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
-    color: #333333;
+}
+
+.label {
+    color: $text-primary;
+    margin-right: 20px;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
 
 }
 
-::placeholder {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
-    /* identical to box height, or 171% */
+.errorMessage {
+    color: $red;
+}
 
-    text-align: right;
+.fieldContainer {
+    width: 100%;
+    height: 54px;
+    position: relative;
+}
 
-    color: #75777A;
+.field {
+    @include defaultFieldStyles;
+
+    &:focus {
+        border: 1px solid $blue-primary;
+    }
+}
+
+.fieldError {
+    @include defaultFieldStyles;
+    border: 1px solid $red;
+
+    &:focus {
+        border: 1px solid $red;
+    }
+}
+
+.fieldSucceed {
+    @include defaultFieldStyles;
+    border: 1px solid $green;
+
+    &:focus {
+        border: 1px solid $green;
+    }
+}
+
+.action {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+        transition: all .3s;
+    }
 }

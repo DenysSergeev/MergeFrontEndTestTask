@@ -1,11 +1,21 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 
 import Input from "../../base/Input";
 import Button from "../../base/Button";
+import Slider from "../../base/Slider";
 
 import { validateLogin } from "../../../utils/validation";
 
+import slide1 from "../../../assets/img/slide1.png";
+import slide2 from "../../../assets/img/slide2.png";
+import slide3 from "../../../assets/img/slide3.png";
+import slide4 from "../../../assets/img/slide4.png";
+import logo from "../../../assets/logo/Union.png";
+
 import styles from "./Login.module.scss";
+import { Link } from "react-router-dom";
+
+import { ROUTES } from "../../../../src/utils/constants/routes";
 
 const LoginPage = () => {
   const [inputs, setInputs] = useState({
@@ -18,8 +28,24 @@ const LoginPage = () => {
     password: "",
   });
 
+  const [isSucceed, setIsSucceed] = useState({
+    email: false,
+    password: false,
+  });
+
+  const isFormValid = useMemo(() => {
+    const inputsLength = Object.values(inputs).length;
+    const inputsWithAnyValue = Object.values(inputs).filter(
+      (el) => !!el
+    ).length;
+
+    return inputsLength === inputsWithAnyValue;
+  }, [inputs]);
+
   const handleInputChange = (value, valueKey) => {
     setInputs((prev) => ({ ...prev, [valueKey]: value }));
+    setIsSucceed((prev) => ({ ...prev, [valueKey]: false }));
+    setErrors((prev) => ({ ...prev, [valueKey]: "" }));
   };
 
   const handleLogin = (e) => {
@@ -29,48 +55,120 @@ const LoginPage = () => {
       data: inputs,
       onSuccess: () => {
         setErrors({});
+        setIsSucceed({ email: true, password: true });
         alert("You are logged in!");
       },
-      onError: (errors) => setErrors({ ...errors }),
+      onError: (errors) => {
+        setErrors({ ...errors });
+        setIsSucceed({ email: false, password: false });
+      },
     });
   };
 
+  const handleForgotPasswordClick = () => {
+    alert("Forgot password action is called!");
+  };
+
+  const renderSlides = () => {
+    const slidesSchema = [
+      {
+        image: slide1,
+        title: "Tokenplace",
+        description: "Multi-exchange Trading Terminal",
+      },
+      {
+        image: slide2,
+        title: "Fund Platform",
+        description: "Hedge funds wealth management",
+      },
+      {
+        image: slide3,
+        title: "Noviscient",
+        description: "Management Platform",
+      },
+      {
+        image: slide4,
+        title: "Merge Data Review",
+        description:
+          "It gives data managers the power to efficiently manage quality data to ensure database lock readiness.",
+      },
+
+    ];
+
+    const slides = slidesSchema.map((slide) => ({
+      key: Math.random() / Math.random(),
+      renderCustomSlide: () => (
+        <div>
+          <img src={slide.image} alt="slide" className={styles.slideImage} />
+          <p className={styles.slideTitle}>{slide.title}</p>
+          <span className={styles.slideDescription}>{slide.description}</span>
+        </div>
+      ),
+    }));
+
+    return slides;
+  };
+
+
   return (
     <section className={styles.container}>
-      <h1 className={styles.title}>Merge development</h1>
-      <h1 className={styles.signIn}>Sign in</h1>
-      <div className={styles.text}>Don’t have an account?</div>
-      <a href="#" className={styles.signUpNow}>Sign up now</a>
-      <form onSubmit={handleLogin}>
+      <div className={styles.sliderContainer}>
+        <div className={styles.sliderWrapper}>
+          <Slider slides={useMemo(renderSlides, [])} />
+        </div>
+      </div>
+      
+      
+      <form className={styles.form} onSubmit={handleLogin}>
+      <div className={styles.logotype}><img src={logo} alt="" /></div>
+      <div className={styles.heading}>
+        <div className={styles.signIn}>
+          <span >Sign in</span>
+        </div>
+        <div>
+          <span className={styles.headingText}>Don’t have an account?</span>
+          <Link to={ROUTES.ROOT} className={styles.headingTextForm}>Sign up now</Link>
+        </div>
+      </div>
         <Input
-          className={styles.email}
           value={inputs.email}
           valueKey="email"
           label="Email"
+          name="email"
           errorMessage={errors.email}
+          isSucceed={isSucceed.email}
           onChange={handleInputChange}
           
         />
-        
+
         <Input
           value={inputs.password}
           valueKey="password"
           label="Password"
           type="password"
+          name="password"
+          action={{
+            text: "Forgot your password?",
+            onClick: handleForgotPasswordClick,
+          }}
           errorMessage={errors.password}
+          isSucceed={isSucceed.password}
           onChange={handleInputChange}
         />
+    
+        <Button label="Sign in" type="submit" isDisabled={!isFormValid} />
 
-        <Button label="Sign In" type="submit" />
-
+        <div className={styles.infoLinks}>
+          <ul className={styles.links}>
+            <li className={styles.linksLink}><Link to={ROUTES.ROOT}>Contact</Link></li>
+            <li className={styles.linksLink}><Link to={ROUTES.ROOT}>Privacy</Link></li>
+            <li className={styles.linksLink}><Link to={ROUTES.ROOT}>Terms</Link></li>
+          </ul>
+        </div>
       </form>
-      <div className={styles.infoLinks}>
-        <p className={styles.contact}><a href="">Contact</a></p>
-        <p className={styles.privacy}><a href="">Privacy</a></p>
-        <p className={styles.terms}><a href="">Terms</a></p>
-      </div>
     </section>
   );
 };
 
 export default LoginPage;
+

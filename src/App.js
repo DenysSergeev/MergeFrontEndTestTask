@@ -5,8 +5,6 @@ import { ROUTES } from "./utils/constants/routes";
 
 import LoginPage from "./components/pages/Login";
 
-import AnimationPage from "./components/pages/Animation/Animation";
-
 import styles from "./App.module.scss";
 
 function App() {
@@ -15,10 +13,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path={ROUTES.ROOT} element={<LoginPage />}></Route>
-        </Routes>
-        
-        <Routes>
-          <Route path={ROUTES.ROOT} element={<AnimationPage/>}></Route>
         </Routes>
       </BrowserRouter>
     </main>
