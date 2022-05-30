@@ -1,96 +1,121 @@
 @import "../../../styles/variables.scss";
 
 .container {
-    width: 100%;
-    height: 100%;
+    width: 150vw;
+    height: 122vw;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .sliderContainer {
     width: 60vw;
     height: 100%;
-    flex: 1.35;
+    flex: 1.35 1;
     box-sizing: border-box;
-    padding: 1.5rem 0 1.5rem 1.5rem;
+    padding: 1.5rem 14rem 0.5rem 1.5rem;
 }
 
 .sliderWrapper {
-    width: 100%;
+    width: 120%;
     height: 100%;
     border-radius: 15px;
-    background-color: $blue-primary;
+    background-color: #065BEA;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0rem;
 }
 
 .slideImage {
-    width: 512px;
+    max-width: 1013px;
+    height: 659px;
+    margin-bottom: 7rem;
+    margin-right: 1rem;
 }
 
 .slideTitle,
 .slideDescription {
-    color: $background;
+    color: #FFFFFF;
     display: block;
     width: 512px;
     text-align: center;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 29px;
+    line-height: 12px;
+    margin-left: 16rem;
+    padding-top: 1rem;
+}
+
+.slideTitle {
+    font-size: 40px;
+    padding-top: 0rem;
+}
+
+.slideDescription {
+    font-size: 28px;
 }
 
 .logotype {
     display: flex;
-    left: 16.25%;
-    right: -1.59%;
-    top: 28.66%;
-    bottom: 22.89%;
-    margin-left: 9rem;
-    margin-bottom: 5rem;
+    margin-left: 0rem;
+    height: 4rem;
+    margin-bottom: 14rem;
 }
 
 .form {
     width: 40vw;
-    height: 25vw;
+    height: 20vw;
     box-sizing: border-box;
-    padding: 0 5rem;
-    margin-bottom: 10rem;
+    padding: 0rem 0rem 0rem 12.5rem;
+    margin-bottom: 81rem;
 }
 
 .heading {
     display: flex;
-    width: 271px;
-    height: 150px;
+    width: 100%;
+    height: 168px;
     left: 600px;
     top: 94px;
     border-radius: 0px;
+    margin-bottom: 7rem;
 
 }
 
 .signIn {
     display: flex;
-    width: 101px;
-    height: 134px;
+    width: 100%;
+    height: 136px;
     left: 900px;
-    top: 194px;
-
+    top: 196px;
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
-    font-size: 28px;
-    line-height: 100px;
+    font-size: 55px;
+    line-height: 61px;
 
+}
+
+.text {
+    display: flex;
+    margin: 1rem;
 }
 
 .headingText {
     display: flex;
     color: #333333;
-    font-family: Montserrat;
+    font-family: "Montserrat";
     font-weight: 600;
-    line-height: 24px;
-    letter-spacing: 0em;
+    line-height: 15px;
+    letter-spacing: 0.5px;
     text-align: center;
-    margin-top: 5rem;
-    margin-left: -6.3rem;
+    margin-top: 6rem;
+    margin-left: -22.5rem;
+    font-size: 26px;
+    width: 25vw;
 
 }
 
@@ -121,16 +146,27 @@
 }
 
 .headingTextForm {
-    color: $blue-primary;
-    font-family: Montserrat;
-    font-size: 14px;
+    color: #065BEA;
+    font-family: "Montserrat";
+    font-size: 29px;
     font-weight: 600;
-    line-height: 24px;
+    line-height: 32px;
     letter-spacing: 0em;
     text-align: center;
     display: flex;
-    margin-left: 4rem;
+    margin-right: -13rem;
     margin-top: -1.5rem;
+    width: 15vw;
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.input {
+    display: flex;
+}
+
+.button {
+    display: flex;
 }
 
 @media (max-width: 1024px) {

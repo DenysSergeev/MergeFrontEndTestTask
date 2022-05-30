@@ -78,22 +78,20 @@ const LoginPage = () => {
       },
       {
         image: slide2,
+        title: "Merge Data Review",
+        description: "It gives data managers the power to efficiently manage quality data to ensure database lock readiness.",
+      },
+      {
+        image: slide3,
         title: "Fund Platform",
         description: "Hedge funds wealth management",
       },
       {
-        image: slide3,
+        image: slide4,
         title: "Noviscient",
         description: "Management Platform",
-      },
-      {
-        image: slide4,
-        title: "Merge Data Review",
-        description:
-          "It gives data managers the power to efficiently manage quality data to ensure database lock readiness.",
-      },
-
-    ];
+      }
+    ]
 
     const slides = slidesSchema.map((slide) => ({
       key: Math.random() / Math.random(),
@@ -125,11 +123,13 @@ const LoginPage = () => {
         <div className={styles.signIn}>
           <span >Sign in</span>
         </div>
-        <div>
-          <span className={styles.headingText}>Don’t have an account?</span>
-          <Link to={ROUTES.ROOT} className={styles.headingTextForm}>Sign up now</Link>
+        <div className={styles.text}>
+          <span className={styles.headingText}>Don’t have an account?<Link to={ROUTES.ROOT} className={styles.headingTextForm}>Sign up now</Link>
+          </span>
+          
         </div>
       </div>
+      <div className={styles.input}>
         <Input
           value={inputs.email}
           valueKey="email"
@@ -140,7 +140,8 @@ const LoginPage = () => {
           onChange={handleInputChange}
           
         />
-
+        </div>
+        <div className={styles.input}> 
         <Input
           value={inputs.password}
           valueKey="password"
@@ -155,8 +156,10 @@ const LoginPage = () => {
           isSucceed={isSucceed.password}
           onChange={handleInputChange}
         />
-    
+        </div> 
+        <div className={styles.button}>
         <Button label="Sign in" type="submit" isDisabled={!isFormValid} />
+        </div>
 
         <div className={styles.infoLinks}>
           <ul className={styles.links}>
