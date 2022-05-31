@@ -20,7 +20,7 @@
 .sliderWrapper {
     width: 120%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 30px;
     background-color: #065BEA;
     display: flex;
     justify-content: center;
@@ -64,6 +64,7 @@
     margin-left: 0rem;
     height: 4rem;
     margin-bottom: 14rem;
+    color: #22252C;
 }
 
 .form {
@@ -96,7 +97,11 @@
     font-weight: 700;
     font-size: 55px;
     line-height: 61px;
+    color: #333333;
+}
 
+.signInText {
+    display: flex;
 }
 
 .text {
@@ -134,15 +139,20 @@
 }
 
 .linksLink {
-
-    width: 44px;
+    width: 54px;
     display: flex;
     height: 25px;
     /* left: 1060px; */
     /* top: 826px; */
     margin-top: 4rem;
-    margin-left: 2rem;
+    margin-left: 5rem;
     justify-content: center;
+    text-decoration: none;
+    font-size: 29px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    color: #75777A;
 }
 
 .headingTextForm {
@@ -159,14 +169,24 @@
     width: 15vw;
     padding-top: 1rem;
     padding-left: 1.5rem;
+    text-decoration: none;
 }
 
 .input {
     display: flex;
+    width: 58vw;
+    height: 30vw;
+    margin-bottom: -13rem;
 }
 
 .button {
     display: flex;
+    width: 152vh;
+    height: 32vw;
+}
+
+Link {
+    text-decoration: none;
 }
 
 @media (max-width: 1024px) {
