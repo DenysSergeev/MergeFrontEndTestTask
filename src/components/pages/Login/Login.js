@@ -7,9 +7,9 @@ import Slider from "../../base/Slider";
 import { validateLogin } from "../../../utils/validation";
 
 import slide1 from "../../../assets/img/slide1.png";
-import slide2 from "../../../assets/img/slide2.png";
+//import slide2 from "../../../assets/img/slide2.png";
 import slide3 from "../../../assets/img/slide3.png";
-import slide4 from "../../../assets/img/slide4.png";
+import slide2 from "../../../assets/img/slide4.png";
 import logo from "../../../assets/logo/Union.png";
 
 import styles from "./Login.module.scss";
@@ -78,20 +78,17 @@ const LoginPage = () => {
       },
       {
         image: slide2,
-        title: "Merge Data Review",
-        description: "It gives data managers the power to efficiently manage quality data to ensure database lock readiness.",
+        title: "Noviscient",
+        description: "Management Platform",
       },
       {
         image: slide3,
         title: "Fund Platform",
         description: "Hedge funds wealth management",
       },
-      {
-        image: slide4,
-        title: "Noviscient",
-        description: "Management Platform",
-      }
     ]
+
+    
 
     const slides = slidesSchema.map((slide) => ({
       key: Math.random() / Math.random(),
@@ -105,14 +102,23 @@ const LoginPage = () => {
     }));
 
     return slides;
+
+    
   };
 
+  const linkStyle = {
+    color: "#75777A",
+    textDecoration: "none",
+    fontSize: "Montserrat",
+    fontWeight: 600,
+  };
 
   return (
     <section className={styles.container}>
       <div className={styles.sliderContainer}>
         <div className={styles.sliderWrapper}>
-          <Slider slides={useMemo(renderSlides, [])} />
+          <Slider 
+          slides={useMemo(renderSlides, [])} />
         </div>
       </div>
       
@@ -121,7 +127,7 @@ const LoginPage = () => {
       <div className={styles.logotype}><img src={logo} alt="" /></div>
       <div className={styles.heading}>
         <div className={styles.signIn}>
-          <span >Sign in</span>
+          <span className={styles.signInText}>Sign in</span>
         </div>
         <div className={styles.text}>
           <span className={styles.headingText}>Don’t have an account?<Link to={ROUTES.ROOT} className={styles.headingTextForm}>Sign up now</Link>
@@ -163,9 +169,9 @@ const LoginPage = () => {
 
         <div className={styles.infoLinks}>
           <ul className={styles.links}>
-            <li className={styles.linksLink}><Link to={ROUTES.ROOT}>Contact</Link></li>
-            <li className={styles.linksLink}><Link to={ROUTES.ROOT}>Privacy</Link></li>
-            <li className={styles.linksLink}><Link to={ROUTES.ROOT}>Terms</Link></li>
+            <li className={styles.linksLink}><Link style={linkStyle} to={ROUTES.ROOT}>Contact</Link></li>
+            <li className={styles.linksLink}><Link style={linkStyle} to={ROUTES.ROOT}>Privacy</Link></li>
+            <li className={styles.linksLink}><Link style={linkStyle} to={ROUTES.ROOT}>Terms</Link></li>
           </ul>
         </div>
       </form>

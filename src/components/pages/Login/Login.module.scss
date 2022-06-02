@@ -33,6 +33,10 @@
     height: 659px;
     margin-bottom: 7rem;
     margin-right: 1rem;
+    
+    font-family: "Montserrat";
+    list-style: none;
+    filter: drop-shadow(0px 70px 75px rgba(0, 46, 123, 0.7));
 }
 
 .slideTitle,
@@ -139,17 +143,15 @@
 }
 
 .linksLink {
-    width: 54px;
+    width: 120px;
     display: flex;
     height: 25px;
-    /* left: 1060px; */
-    /* top: 826px; */
     margin-top: 4rem;
-    margin-left: 5rem;
+    margin-left: 35px;
     justify-content: center;
     text-decoration: none;
     font-size: 29px;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
     color: #75777A;
