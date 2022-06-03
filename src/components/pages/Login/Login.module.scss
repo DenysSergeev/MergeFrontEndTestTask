@@ -1,5 +1,6 @@
 @import "../../../styles/variables.scss";
 
+
 .container {
     width: 150vw;
     height: 122vw;
@@ -17,6 +18,12 @@
     padding: 1.5rem 14rem 0.5rem 1.5rem;
 }
 
+
+
+.wrapperSlider {
+    height: 100%;
+}
+
 .sliderWrapper {
     width: 120%;
     height: 100%;
@@ -30,10 +37,10 @@
 
 .slideImage {
     max-width: 1013px;
-    height: 659px;
-    margin-bottom: 7rem;
+    height: 54%;
+    padding-top: 14em;
+    margin-bottom: 3rem;
     margin-right: 1rem;
-    
     font-family: "Montserrat";
     list-style: none;
     filter: drop-shadow(0px 70px 75px rgba(0, 46, 123, 0.7));
@@ -61,6 +68,12 @@
 
 .slideDescription {
     font-size: 28px;
+
+}
+
+.sliderSwiper {
+    display: flex;
+
 }
 
 .logotype {
@@ -183,7 +196,7 @@
 
 .button {
     display: flex;
-    width: 152vh;
+    width: 58vw;
     height: 32vw;
 }
 
@@ -191,12 +204,90 @@ Link {
     text-decoration: none;
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
+    .container {
+        width: 150%;
+    }
+
+    .headingText {
+        display: flex;
+        color: #333333;
+        font-family: "Montserrat";
+        font-weight: 600;
+        line-height: 15px;
+        letter-spacing: -0.5px;
+        text-align: center;
+        margin-top: 6rem;
+        margin-left: -20.5rem;
+        font-size: 26px;
+        width: 25vw;
+
+    }
+
+    .headingTextForm {
+        color: #065BEA;
+        font-family: "Montserrat";
+        font-size: 29px;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: center;
+        display: flex;
+        margin-right: -13rem;
+        margin-top: -1.5rem;
+        width: 15vw;
+        padding-top: 1rem;
+        padding-left: 1.5rem;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 1260px) {
+    .container {
+        height: 200%;
+        width: 150%;
+
+    }
+
+    .headingText {
+        display: flex;
+        color: #333333;
+        font-family: "Montserrat";
+        font-weight: 600;
+        line-height: 15px;
+        letter-spacing: -1.5px;
+        text-align: center;
+        margin-top: 6rem;
+        margin-left: -17.5rem;
+        font-size: 25px;
+        width: 25vw;
+    }
+
+    .headingTextForm {
+        color: #065BEA;
+        font-family: "Montserrat";
+        font-size: 27px;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: center;
+        display: flex;
+        margin-right: -13rem;
+        margin-top: -1.5rem;
+        width: 15vw;
+        padding-top: 1rem;
+        padding-left: 1.5rem;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
     .container {
         height: 120%;
         width: 100%;
-        
+
     }
+
     .sliderContainer {
         height: 100%;
         width: 30%;
@@ -216,49 +307,31 @@ Link {
         height: 4%;
         margin-left: 2rem;
     }
+
+    .button {
+        width: 10px;
+    }
 }
 
-@media (max-width: 768px) {
+
+@media screen and (max-width: 320px) {
     .container {
-        width: 100%;
+        width: 162%;
+        height: 293%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
 
     .sliderContainer {
         height: 100%;
-        width: 10%;
-    }
-
-    .sliderWrapper {
-        width: 100%;
-        height: 100%;
+        width: 34%;
     }
 
     .form {
-        height: 50%;
-        width: 30%;
-        display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    }
-
-    .logotype {
-        height: 4%;
-        margin-left: 2rem;
-    }
-
-    
-}
-
-@media (max-width: 480px) {
-    .container {
-        width: 80%;
-    }
-}
-
-@media (max-width: 320px) {
-    .container {
-        max-width: none;
         width: 100%;
+        height: 100%;
+        display: flex;
     }
 }
-

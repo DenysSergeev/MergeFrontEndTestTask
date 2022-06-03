@@ -88,12 +88,11 @@ const LoginPage = () => {
       },
     ]
 
-    
 
     const slides = slidesSchema.map((slide) => ({
       key: Math.random() / Math.random(),
       renderCustomSlide: () => (
-        <div>
+        <div >
           <img src={slide.image} alt="slide" className={styles.slideImage} />
           <p className={styles.slideTitle}>{slide.title}</p>
           <span className={styles.slideDescription}>{slide.description}</span>
@@ -113,6 +112,7 @@ const LoginPage = () => {
     fontWeight: 600,
   };
 
+
   return (
     <section className={styles.container}>
       <div className={styles.sliderContainer}>
@@ -121,7 +121,6 @@ const LoginPage = () => {
           slides={useMemo(renderSlides, [])} />
         </div>
       </div>
-      
       
       <form className={styles.form} onSubmit={handleLogin}>
       <div className={styles.logotype}><img src={logo} alt="" /></div>
