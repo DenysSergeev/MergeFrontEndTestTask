@@ -14,20 +14,21 @@
 }
 
 .sliderWrapper {
-    
+
     :global(.swiper-pagination-bullet) {
         width: 1rem;
         height: 1rem;
-        left: 362px;
         background: rgba(255, 255, 255, 0.4);
         opacity: 1;
         
+        
     }
-
     :global(.swiper-pagination-bullet-active) {
         background-color: #FFFFFF;
         width: 1rem;
         height: 1rem;
         border-radius: 10px;
+        opacity: 1;
     }
+    
 }

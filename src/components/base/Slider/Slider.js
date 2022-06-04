@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import styles from "./Slider.module.scss";
 
-const Slider = ({slides, spaceBetween, slidesPerView, onSlideChange, number }) => {
+const Slider = ({slides, spaceBetween, slidesPerView, onSlideChange }) => {
     const renderSlides = () => {
         return slides.map((slide) => {
             return (
@@ -29,6 +29,7 @@ const Slider = ({slides, spaceBetween, slidesPerView, onSlideChange, number }) =
         modules={[Pagination]}
         pagination={{clickable: true}}
         setWrapperSize={false}
+        
         className={styles.slider}>
             {renderSlides()}
         </Swiper>

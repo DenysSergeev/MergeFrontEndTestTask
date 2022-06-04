@@ -7,9 +7,11 @@ import Slider from "../../base/Slider";
 import { validateLogin } from "../../../utils/validation";
 
 import slide1 from "../../../assets/img/slide1.png";
-//import slide2 from "../../../assets/img/slide2.png";
+import slide2 from "../../../assets/img/slide2.png";
 import slide3 from "../../../assets/img/slide3.png";
-import slide2 from "../../../assets/img/slide4.png";
+
+
+
 import logo from "../../../assets/logo/Union.png";
 
 import styles from "./Login.module.scss";
@@ -78,8 +80,8 @@ const LoginPage = () => {
       },
       {
         image: slide2,
-        title: "Noviscient",
-        description: "Management Platform",
+        title: "Merge Data Review",
+        description: "It gives data managers the power to efficiently manage quality data to ensure database lock readiness.",
       },
       {
         image: slide3,
@@ -92,7 +94,7 @@ const LoginPage = () => {
     const slides = slidesSchema.map((slide) => ({
       key: Math.random() / Math.random(),
       renderCustomSlide: () => (
-        <div >
+        <div className={styles.promoSlides}>
           <img src={slide.image} alt="slide" className={styles.slideImage} />
           <p className={styles.slideTitle}>{slide.title}</p>
           <span className={styles.slideDescription}>{slide.description}</span>
@@ -122,8 +124,10 @@ const LoginPage = () => {
         </div>
       </div>
       
-      <form className={styles.form} onSubmit={handleLogin}>
       <div className={styles.logotype}><img src={logo} alt="" /></div>
+
+      <form className={styles.form} onSubmit={handleLogin}>
+      
       <div className={styles.heading}>
         <div className={styles.signIn}>
           <span className={styles.signInText}>Sign in</span>
