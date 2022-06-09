@@ -130,14 +130,13 @@ const LoginPage = () => {
       
       <div className={styles.heading}>
         <div className={styles.signIn}>
-          <span className={styles.signInText}>Sign in</span>
+          <span>Sign in</span>
         </div>
         <div className={styles.text}>
-          <span className={styles.headingText}>Don’t have an account?<Link to={ROUTES.ROOT} className={styles.headingTextForm}>Sign up now</Link>
-          </span>
-          
+          <span className={styles.headingText}>Don’t have an account?<Link to={ROUTES.ROOT} className={styles.headingTextForm}>Sign up now</Link></span>
         </div>
       </div>
+        
       <div className={styles.input}>
         <Input
           value={inputs.email}
