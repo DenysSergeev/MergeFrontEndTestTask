@@ -2,17 +2,26 @@
 
 
 .container {
-    width: 200vw;
+    width: 100vw;
+    max-width: 100vw;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .sliderContainer {
-    width: 190vw;
+    width: 100%;
     height: 100%;
+    display: flex;
     flex: 1.35;
     box-sizing: border-box;
     margin-bottom: 20px;
@@ -26,15 +35,15 @@
     background-color: $blue-primary;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
-    margin-top: 15px;
+    padding: 30px 10px 0;
     border-radius: 30px;
+    box-sizing: border-box;
 }
 
 .slideImage {
-    width: 535px;
-    margin: 0px 0px;
-    padding: 150px 0px;
+    width: 100%;
+    margin: 0;
+    padding: 150px 0 0;
     filter: drop-shadow(0px 70px 75px rgba(0, 46, 123, 0.7));
 }
 
@@ -42,40 +51,51 @@
 .slideDescription {
     color: $background;
     display: block;
-    width: 512px;
+    width: 100%;
     text-align: center;
     justify-content: center;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
 }
 
 .slideTitle {
-    font-size: 30px;
+    font-size: 18px;
 }
 
 .slideDescription {
-    font-size: 25px;
+    font-size: 14px;
 }
 
 .logotype {
     margin: 10px auto;
     display: flex;
     padding-top: 40px;
+    width: 100%;
+}
+
+.logotype>img {
+    width: 100%;
+}
+
+.formContainer {
+    width: 100%;
 }
 
 .form {
     box-sizing: border-box;
     width: 100%;
-    padding: 50px 35px;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .signIn {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
-    font-size: 45px;
+    font-size: 20px;
 }
 
 .heading {
@@ -87,202 +107,99 @@
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 14px;
     line-height: 20px;
     padding-top: 15px;
 }
 
 .headingTextForm {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
-    font-size: 20px;
+    font-size: 14px;
     line-height: 20px;
-    padding-left: 25px;
+    margin-left: 10px;
     text-decoration: none;
-}
-
-.infoLinks {
-    width: 100%;
-}
-
-.links {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    padding-left: 0px;
-}
-
-.linksLink {
-    width: 100%;
-    text-align: center;
 }
 
 @media screen and (min-width: 768px) {
     .container {
-        flex-direction: row;
-        display: flex;
-    }
-
-    .sliderContainer {
-        width: 60vw;
-        padding: 0.5rem 0 1.5rem 1.5rem;
-    }
-
-    .slideTitle,
-    .slideDescription {
-        padding-left: 20vw;
-    }
-
-    .slideImage {
-        padding: 150px 20vw;
-    }
-
-    .sliderWrapper {
-        border-radius: 15px;
-        width: 130vw;
-    }
-
-    .form {
-        width: 60vw;
-        height: 100vw;
-        padding: 75px 35px 22px 7px;
-        margin: 10px 10px 40px;
-    }
-
-    .heading {
-        margin-top: 50px;
-    }
-
-    .headingTextForm {
-        font-size: 14px;
-    }
-
-    .text {
-        font-size: 20px;
+        padding: 30px;
     }
 
     .logotype {
-        display: flex;
-        padding: 0vw 0vw 100vw 0vw;
-        margin: 0 -47vw;
-        height: 40px;
-    }
-
-    .infoLinks {
-        margin-top: 25vw;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .container {
-        display: flex;
-    }
-
-    .slideImage {
-        padding: 5vw 5vw 10vw;
-        width: 75vw;
-        margin-top: 10vw;
-    }
-
-    .logotype {
-        display: flex;
-        padding: 0vw 0vw 78vw 0vw;
-        margin: 0px -49vw;
-        height: 60px;
-    }
-
-    .form {
-        height: 60vw;
+        width: 50%;
     }
 
     .signIn {
         font-size: 50px;
     }
 
+    .text, 
+    .headingTextForm {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .body {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .sliderContainer {
+        width: 60%;
+    }
+
+    .sliderWrapper {
+        width: 100%;
+    }
+
+    .logotype {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .formContainer {
+        width: calc(40% - 30px);
+    }
+
+    .signIn {
+        font-size: 40px;
+    }
+
     .text {
         font-size: 30px;
     }
 
     .headingTextForm {
-        font-size: 23px;
-    }
-
-    .infoLinks {
-        margin-top: 15vw;
-    }
-
-    .linksLink {
         font-size: 23px;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .container {
-        height: 125vw;
-    }
-
     .sliderContainer {
-        height: 123vw;
-    }
-
-    .slideTitle {
-        padding-left: 20vw;
-    font-size: 40px;
-    margin-top: 1vw;
-    }
-    .slideDescription {
-        font-size: 28px;
+        width: 65%;
     }
 
     .sliderWrapper {
-        width: 115vw;
-    }
-
-    .slideImage {
-        padding: 0vw 4vw 8vw;
-        width: 70vw;
-        margin-top: 16vw;
+        width: 100%;
     }
 
     .logotype {
-        display: flex;
-        padding: 0vw 3vw 106vw 0vw;
-        margin: 0px -41vw;
-        height: 64px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
-    .form {
-        height: 106vw;
-        width: 75vw;
-        margin-top: 21vw;
-    }
-
-    .signIn {
-        font-size: 57px;
-    }
-
-    .text {
-        font-size: 31px;
-        margin-top: 21px;
-    }
-
-    .headingTextForm {
-        font-size: 28px;
-    }
-
-    .links {
-        width: 35vw;
-        padding-top: 17vw;
-        padding-left: 0vw;
-    }
-
-    .infoLinks {
-        height: 20vw;
-    }
-
-    .linksLink {
-        font-size: 30px;
+    .formContainer {
+        width: calc(35% - 30px);
     }
 }
