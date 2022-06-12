@@ -12,6 +12,7 @@ import slide2 from "../../../assets/img/slide2.png";
 import slide3 from "../../../assets/img/slide3.png";
 import logo from "../../../assets/img/Union.png";
 import styles from "./Login.module.scss";
+
 const LoginPage = () => {
   const [inputs, setInputs] = useState({
     email: "",
@@ -99,10 +100,8 @@ const LoginPage = () => {
             slides={useMemo(renderSlides, [])} />
           </div>
         </div>
-
         <div className={styles.formContainer}>
           <div className={styles.logotype}><img src={logo} alt="" /></div>
-
             <div className={styles.heading}>
               <div className={styles.signIn}>
                 <span>Sign in</span>

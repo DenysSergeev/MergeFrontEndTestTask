@@ -1,14 +1,11 @@
 @import './styles/variables.scss';
 
 body {
-  
   margin: 0;
   font-family: 'Montserrat';
-  
+  background-color: $background;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  background-color: $background;
 }
 
 h1 {

@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./Slider.scss";
 
+
 const Slider = ({slides, spaceBetween, slidesPerView, onSlideChange }) => {
     const renderSlides = () => {
         return slides.map((slide) => {
