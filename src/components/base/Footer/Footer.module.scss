@@ -1,6 +1,6 @@
 .footer {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,4 +11,17 @@
     text-decoration: none;
     font-family: "Montserrat";
     font-weight: 600;
+}
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        justify-content: space-around;
+        margin-top: 60px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .footer {
+        margin-top: 100px;
+    }
 }

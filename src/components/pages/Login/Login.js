@@ -137,10 +137,11 @@ const LoginPage = () => {
             />
             <Button label="Sign in" type="submit" isDisabled={!isFormValid} />
           </form>
+          <Footer />
         </div>
       </div>
 
-      <Footer />
+      
     </section>
 );
 };

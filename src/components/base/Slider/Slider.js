@@ -5,32 +5,29 @@ import PropTypes from "prop-types";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import styles from "./Slider.module.scss";
+import "./Slider.scss";
 
 const Slider = ({slides, spaceBetween, slidesPerView, onSlideChange }) => {
     const renderSlides = () => {
         return slides.map((slide) => {
             return (
-                <SwiperSlide className={styles.slide} key={slide.key}>
+                <SwiperSlide className="slide" key={slide.key}>
                     {slide.renderCustomSlide()}
-                </SwiperSlide>
-            );
+                </SwiperSlide> 
+            );    
         });
     };
 
-    
-
     return (
-        <div className={styles.sliderWrapper}>
+        <div className="sliderWrapper">
         <Swiper
+        className="slider"
         spaceBetween={spaceBetween}
         slidesPerView={slidesPerView}
         onSlideChange={onSlideChange}
         modules={[Pagination]}
         pagination={{clickable: true}}
-        setWrapperSize={false}
-        
-        className={styles.slider}>
+        setWrapperSize={false}>
             {renderSlides()}
         </Swiper>
         </div>

@@ -44,7 +44,7 @@
     width: 100%;
     margin: 0;
     padding: 150px 0 0;
-    filter: drop-shadow(0px 70px 75px rgba(0, 46, 123, 0.7));
+    filter: drop-shadow(0px 50px 25px rgba(0, 46, 123, 0.7));
 }
 
 .slideTitle,
@@ -70,7 +70,8 @@
 .logotype {
     margin: 10px auto;
     display: flex;
-    padding-top: 40px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     width: 100%;
 }
 
@@ -95,7 +96,7 @@
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 28px;
 }
 
 .heading {
@@ -133,7 +134,7 @@
     }
 
     .signIn {
-        font-size: 50px;
+        font-size: 28px;
     }
 
     .text, 
@@ -155,6 +156,7 @@
 
     .sliderContainer {
         width: 60%;
+        flex: 0.35;
     }
 
     .sliderWrapper {
@@ -167,20 +169,29 @@
         padding: 0;
     }
 
+    .logotype > img {
+        width: 80%;
+    }
+
     .formContainer {
         width: calc(40% - 30px);
+        margin-top: 20px;
+    }
+
+    .heading {
+        margin-top: 50px;
     }
 
     .signIn {
-        font-size: 40px;
+        font-size: 28px;
     }
 
     .text {
-        font-size: 30px;
+        font-size: 14px;
     }
 
     .headingTextForm {
-        font-size: 23px;
+        font-size: 14px;
     }
 }
 
@@ -195,11 +206,19 @@
 
     .logotype {
         width: 100%;
-        margin: 0;
+        margin: 10px;
         padding: 0;
     }
 
     .formContainer {
         width: calc(35% - 30px);
+    }
+
+    .heading {
+        margin-top: 80px;
+    }
+
+    .form {
+        margin-top: 40px;
     }
 }
