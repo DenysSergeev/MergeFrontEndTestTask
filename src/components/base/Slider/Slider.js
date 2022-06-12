@@ -41,7 +41,7 @@ Slider.propTypes = {
     slides: PropTypes.array,
   };
   
-  Slider.defaultProps = {
+Slider.defaultProps = {
     spaceBetween: 50,
     slidesPerView: 1,
     onSlideChange: () => {},

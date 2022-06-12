@@ -10,7 +10,7 @@ import { ROUTES } from "../../../../src/utils/constants/routes";
 import slide1 from "../../../assets/img/slide1.png";
 import slide2 from "../../../assets/img/slide2.png";
 import slide3 from "../../../assets/img/slide3.png";
-import logo from "../../../assets/logo/Union.png";
+import logo from "../../../assets/img/Union.png";
 import styles from "./Login.module.scss";
 const LoginPage = () => {
   const [inputs, setInputs] = useState({
@@ -139,11 +139,9 @@ const LoginPage = () => {
           </form>
           <Footer />
         </div>
-      </div>
-
-      
+      </div>  
     </section>
-);
+  );
 };
 
 export default LoginPage;

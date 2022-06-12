@@ -1,17 +1,16 @@
 .slider,
 .slide {
-    max-width: 100%;
-    height: 100%;
-    bottom: 60px;
-    left: 0px;
+  max-width: 100%;
+  height: 100%;
+  bottom: 60px;
+  left: 0px;
 }
 
 .slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 3vw;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3vw;
 }
 
 .swiper-pagination {
@@ -21,13 +20,12 @@
 }
 
 .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    display: flex;
-    filter: drop-shadow(rgba(255, 255, 255, 0.4));
-  }
-  
-.swiper-pagination-bullet-active {
-    background: #FFFFFF;
-  }
+  width: 8px;
+  height: 8px;
+  display: flex;
+  filter: drop-shadow(rgba(255, 255, 255, 0.4));
+}
 
+.swiper-pagination-bullet-active {
+  background: #FFFFFF;
+}
