@@ -202,26 +202,69 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .sliderContainer {
+    .body {
+        width: 197vw;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .promoSlides {
         width: 65%;
+        margin-bottom: 5vh;
+    }
+
+    .slideTitle {
+        font-size: 40px;
+        margin-top: 15vh;
+    }
+
+    .slideDescription {
+        font-size: 28px;
+        margin: 5px;
+    }
+
+    .sliderContainer {
+        width: 100%;
+        padding-bottom: 45px;
+        background-size: 87%;
     }
 
     .sliderWrapper {
         width: 100%;
+        margin-top: 25vh;
+        background-size: 170%;
     }
 
     .logotype {
-        width: 100%;
-        margin: 10px;
-        padding: 0;
+        width: 57%;
+        margin-top: 52px;
+        padding: 0 51px;
     }
 
     .formContainer {
-        width: calc(35% - 30px);
+        //width: calc(35% - 30px);
+        width: 39.5%;
     }
 
     .heading {
-        margin-top: 80px;
+        margin-top: 25vh;
+        padding: 0 57px;
+    }
+
+    .signIn {
+        font-size: 55px;
+    }
+
+    .headingTextForm {
+        font-size: 28px;
+        margin-left: 15px;
+    }
+
+    .text {
+        font-size: 28px;
+        margin-top: 26px;
     }
 
     .form {

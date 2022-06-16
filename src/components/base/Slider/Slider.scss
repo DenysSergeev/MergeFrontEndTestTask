@@ -29,3 +29,32 @@
 .swiper-pagination-bullet-active {
   background: #FFFFFF;
 }
+
+@media screen and (min-width: 1440px) {
+  .slide {
+    width: 65%;
+    margin-top: 25vh;
+  }
+
+  .slider {
+    bottom: 22vh;
+  }
+
+  .sliderWrapper {
+    width: 110vw;
+    margin-top: 0;
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets,
+  .swiper-pagination-horizontal {
+    
+    left: 41.5vw;
+    width: 25%;
+  }
+
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+  }
+}
