@@ -1,0 +1,40 @@
+@import "../../../styles/variables.scss";
+
+.slider,
+.slide {
+  height: 100%;
+}
+
+.slider {
+  :global(.swiper-pagination-bullet),
+  :global(.swiper-pagination-bullet-active) {
+      background: $background;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      opacity: 0.4;
+      margin: 0 22px 0 !important;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+      opacity: 1;
+  }
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 480px) {
+  .slider {
+      :global(.swiper-pagination-bullet) {
+          margin: 0 22px 15px !important;
+      }
+
+      :global(.swiper-pagination-bullet-active) {
+          margin: 0 22px 15px !important;
+      }
+  }
+}

@@ -1,273 +1,155 @@
 @import "../../../styles/variables.scss";
 
 .container {
-    width: 100vw;
-    max-width: 100vw;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
     box-sizing: border-box;
-}
-
-.body {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
 }
 
 .sliderContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex: 1.35;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    border-radius: 30px;
-    align-items: center;
-    justify-content: center;
-    background-size: 70%;
-    background-repeat: no-repeat;
     background-color: $blue-primary;
-    background-image: url(../../../../src/assets/img/Vector1.png);
+    background-image: url(../../../assets/img/slider_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
+    box-sizing: border-box;
 }
 
-.sliderWrapper {
+.slide {
     width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 10px 0;
-    border-radius: 30px;
     box-sizing: border-box;
-    background-image: url(../../../../src/assets/img/Vector2.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
 }
 
 .slideImage {
     width: 100%;
-    margin: 0;
-    padding: 150px 0 0;
-    filter: drop-shadow(0px 50px 25px rgba(0, 46, 123, 0.7));
-}
-
-.slideTitle,
-.slideDescription {
-    color: $background;
-    display: block;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 600;
+    box-shadow: 0px 14px 46px 8px rgba(0, 46, 123, 0.7);
+    margin-bottom: 40px;
 }
 
 .slideTitle {
-    font-size: 18px;
+    color: rgba($color: $background, $alpha: 0.9);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
 .slideDescription {
-    font-size: 14px;
-}
-
-.logotype {
-    margin: 10px auto;
-    display: flex;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    width: 100%;
-}
-
-.logotype>img {
-    width: 100%;
+    text-align: center;
+    color: $background;
+    font-size: 12px;
+    font-weight: 400;
 }
 
 .formContainer {
-    width: 100%;
-}
-
-.form {
+    padding: 20px;
     box-sizing: border-box;
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
-.signIn {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 700;
+.logo {
+    margin-bottom: 20px;
+}
+
+.title {
     font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .heading {
-    width: 100%;
-    margin-top: 10px;
+    font-size: 12px;
+    margin-bottom: 40px;
 }
 
-.text {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    padding-top: 15px;
-}
-
-.headingTextForm {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    font-size: 14px;
-    line-height: 20px;
-    margin-left: 10px;
+.headingLink {
     text-decoration: none;
+    color: $blue-primary;
+    transition: all 0.3s;
+
+    &:hover {
+        color: #0a4ab6;
+    }
+
+    &:active {
+        color: $blue-primary;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .slide {
+        padding: 80px 80px 60px;
+    }
+
+    .formContainer {
+        padding: 40px;
+    }
 }
 
 @media screen and (min-width: 768px) {
-    .container {
-        padding: 30px;
-    }
-
-    .logotype {
-        width: 50%;
-    }
-
-    .signIn {
-        font-size: 28px;
-    }
-
-    .text,
-    .headingTextForm {
-        font-size: 24px;
+    .slideImage {
+        width: 60%;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .container {
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .body {
         flex-direction: row;
-        justify-content: space-between;
+        min-height: 100vh;
+        padding: 20px;
     }
 
     .sliderContainer {
-        width: 60%;
-        flex: 0.35;
+        width: 57%;
+        min-height: 100%;
+        border-radius: 15px;
     }
 
-    .sliderWrapper {
-        width: 100%;
+    .slide {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .logotype {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .logotype>img {
+    .slideImage {
         width: 80%;
-    }
-
-    .formContainer {
-        width: calc(40% - 30px);
-        margin-top: 20px;
-    }
-
-    .heading {
-        margin-top: 50px;
-    }
-
-    .signIn {
-        font-size: 28px;
-    }
-
-    .text {
-        font-size: 14px;
-    }
-
-    .headingTextForm {
-        font-size: 14px;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .body {
-        width: 197vw;
-    }
-
-    .container {
-        width: 100%;
-    }
-
-    .promoSlides {
-        width: 65%;
-        margin-bottom: 5vh;
+        margin-bottom: 85px;
     }
 
     .slideTitle {
-        font-size: 40px;
-        margin-top: 15vh;
+        font-size: 20px;
     }
 
     .slideDescription {
-        font-size: 28px;
-        margin: 5px;
-    }
-
-    .sliderContainer {
-        width: 100%;
-        padding-bottom: 45px;
-        background-size: 87%;
-    }
-
-    .sliderWrapper {
-        width: 100%;
-        margin-top: 25vh;
-        background-size: 170%;
-    }
-
-    .logotype {
-        width: 57%;
-        margin-top: 52px;
-        padding: 0 51px;
+        font-size: 14px;
     }
 
     .formContainer {
-        //width: calc(35% - 30px);
-        width: 39.5%;
+        width: 43%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 100px 30px 80px;
+    }
+
+    .logo {
+        margin-bottom: 110px;
+    }
+
+    .title {
+        margin-bottom: 15px;
+    }
+
+    .heading,
+    .headingLink {
+        font-size: 14px;
     }
 
     .heading {
-        margin-top: 25vh;
-        padding: 0 57px;
-    }
-
-    .signIn {
-        font-size: 55px;
-    }
-
-    .headingTextForm {
-        font-size: 28px;
-        margin-left: 15px;
-    }
-
-    .text {
-        font-size: 28px;
-        margin-top: 26px;
-    }
-
-    .form {
-        margin-top: 40px;
+        margin-bottom: 65px;
     }
 }

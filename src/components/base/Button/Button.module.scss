@@ -2,43 +2,36 @@
 
 .button {
     width: 100%;
-    height: 54px;
-    border-radius: 8px;
-    margin-top: 50px;
+    height: 44px;
     border: 0;
     outline: 0;
-    cursor: pointer;
     background-color: $blue-primary;
     color: $background;
+    border-radius: 8px;
+    box-shadow: 0px 15px 40px -5px rgba(6, 91, 234, 0.8);
+    cursor: pointer;
     transition: all 0.3s;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 14px;
 
 
     &:hover {
         background-color: $blue-secondary;
-        filter: drop-shadow(0px 10px 12px rgba(0, 46, 123, 0.7));
     }
 
     &:active {
         background-color: $blue-primary;
-        filter: drop-shadow(0px 10px 12px rgba(0, 46, 123, 0.7));
     }
 
     &:disabled {
         background-color: $grey;
-        cursor: default;
+        cursor: not-allowed;
+        box-shadow: 0 0 0 0;
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 320px) {
     .button {
-        height: 105px;
-        width: 75%;
-        margin: 85px 55px;
-        font-size: 32px;
+        font-size: 16px;
+        height: 54px;
     }
 }

@@ -4,6 +4,6 @@ export const REQUIRED_ERRORS = {
   };
   
   export const TOO_SHORT_ERRORS = {
-    password: "Password must contain at least 8 symbols",
+    password: "At least 8 symbols",
   };
   

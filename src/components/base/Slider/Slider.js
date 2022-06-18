@@ -5,14 +5,14 @@ import PropTypes from "prop-types";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import "./Slider.scss";
+import styles from "./Slider.module.scss";
 
 
 const Slider = ({slides, spaceBetween, slidesPerView, onSlideChange }) => {
     const renderSlides = () => {
         return slides.map((slide) => {
             return (
-                <SwiperSlide className="slide" key={slide.key}>
+                <SwiperSlide className={styles.slide} key={slide.key}>
                     {slide.renderCustomSlide()}
                 </SwiperSlide> 
             );    
@@ -20,9 +20,8 @@ const Slider = ({slides, spaceBetween, slidesPerView, onSlideChange }) => {
     };
 
     return (
-        <div className="sliderWrapper">
         <Swiper
-        className="slider"
+        className={styles.slider}
         spaceBetween={spaceBetween}
         slidesPerView={slidesPerView}
         onSlideChange={onSlideChange}
@@ -31,7 +30,6 @@ const Slider = ({slides, spaceBetween, slidesPerView, onSlideChange }) => {
         setWrapperSize={false}>
             {renderSlides()}
         </Swiper>
-        </div>
     );
 };
 
