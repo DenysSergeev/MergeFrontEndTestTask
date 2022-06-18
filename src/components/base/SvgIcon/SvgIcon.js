@@ -4,12 +4,12 @@ import PropTypes from "prop-types";
 // base icons
 import { ReactComponent as Logo } from "../../../assets/img/logo.svg";
 
-const FIRMWARES_ICONS = {
+const BASE_ICONS = {
   logo: Logo,
 };
 
 const SVG_BY_TYPE = {
-  ...FIRMWARES_ICONS,
+  ...BASE_ICONS,
 };
 
 const SvgIcon = ({ type, className }) => {
